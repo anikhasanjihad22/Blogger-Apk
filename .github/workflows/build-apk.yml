@@ -1,7 +1,7 @@
 name: Build NexFlix APK
 
 on:
-  workflow_dispatch:      # lets you trigger it manually from the Actions tab
+  workflow_dispatch:
   push:
     branches: [ main ]
     paths:
@@ -22,14 +22,17 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
       - name: Install Bubblewrap CLI
         run: npm install -g @bubblewrap/cli
 
       - name: Restore keystore from secret
         run: echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > android.keystore
 
-      - name: Initialize Android project from twa-manifest.json
-        run: bubblewrap build --skipPwaValidation
+      - name: Build APK/AAB
+        run: yes "n" | bubblewrap build --skipPwaValidation
         env:
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
