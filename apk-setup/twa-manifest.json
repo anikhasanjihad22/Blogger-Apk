@@ -1,8 +1,8 @@
 {
   "packageId": "top.rnexflix.twa",
   "host": "www.rnexflix.top",
-  "name": "NexFlix",
-  "launcherName": "NexFlix",
+  "name": "Nexflix",
+  "launcherName": "Nexflix",
   "display": "standalone",
   "orientation": "any",
   "themeColor": "#e50914",
