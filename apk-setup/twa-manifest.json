@@ -1,0 +1,34 @@
+{
+  "packageId": "top.rnexflix.twa",
+  "host": "www.rnexflix.top",
+  "name": "NexFlix",
+  "launcherName": "NexFlix",
+  "display": "standalone",
+  "orientation": "any",
+  "themeColor": "#e50914",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "backgroundColor": "#000000",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://www.rnexflix.top/icons/icon-512.png",
+  "maskableIconUrl": "https://www.rnexflix.top/icons/icon-512-maskable.png",
+  "webManifestUrl": "https://www.rnexflix.top/manifest.json",
+  "shortcuts": [],
+  "splashScreenFadeOutDuration": 300,
+  "appVersion": "1",
+  "appVersionName": "1.0.0",
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "nexflix"
+  },
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  }
+}
